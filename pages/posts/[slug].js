@@ -31,13 +31,13 @@ export async function getStaticPaths(){
     const paths = files.map((file) => {
         return {
             params:{
-                slug:file.replace("mdx","")
+                slug:file.replace(".mdx","")
             }
         }
     });
     return {
         paths,
-        fallback:true
+        fallback:false
     }
 }
 
